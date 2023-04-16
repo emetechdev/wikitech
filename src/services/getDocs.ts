@@ -1,6 +1,10 @@
 import { WikiInterface } from "../entities/wiki";
 import docList from "./docList";
 
+const getDocs = (fileName: string) => {};
+export default getDocs;
+
+/* 
 const getDocs = async (fileName: string): Promise<WikiInterface> => {
     const type = docList().find((i) => {
         if (fileName === i) {
@@ -9,9 +13,9 @@ const getDocs = async (fileName: string): Promise<WikiInterface> => {
                 contentToDisplay: "",
             };
         }
-    });
+    }); */
 
-    /* let docFile2: any;
+/* let docFile2: any;
 
     const fileReader = new FileReader();
     fileReader.readAsText(arch);
@@ -24,7 +28,7 @@ const getDocs = async (fileName: string): Promise<WikiInterface> => {
         console.log("onload: ", fileReader.error);
     }; */
 
-    const docFile: WikiInterface = await fetch(`src/docs/${fileName}.md`)
+/*     const docFile: WikiInterface = await fetch(`src/docs/${fileName}.md`)
         .then((res) => {
             return res.blob();
         })
@@ -45,6 +49,4 @@ const getDocs = async (fileName: string): Promise<WikiInterface> => {
         });
 
     return docFile;
-};
-
-export default getDocs;
+}; */
