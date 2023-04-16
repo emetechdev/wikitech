@@ -1,7 +1,12 @@
 import { WikiInterface } from "../entities/wiki";
 import docList from "./docList";
 
-const getDocs = (fileName: string) => {};
+const getDocs = (fileName: string) => {
+    return {
+        title: "hola",
+        contentToDisplay: "hola",
+    };
+};
 export default getDocs;
 
 /* 
