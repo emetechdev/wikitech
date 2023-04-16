@@ -7,9 +7,10 @@ interface DisplayMDDoc {
 
 const DisplayMDDoc = (props: DisplayMDDoc) => {
     const { contentToDisplay } = props;
+
     return (
         <Grid>
-            <ReactMarkdown>{contentToDisplay}</ReactMarkdown>
+            <ReactMarkdown children={contentToDisplay} />
         </Grid>
     );
 };

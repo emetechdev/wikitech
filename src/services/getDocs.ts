@@ -11,6 +11,19 @@ const getDocs = async (fileName: string): Promise<WikiInterface> => {
         }
     });
 
+    /* let docFile2: any;
+
+    const fileReader = new FileReader();
+    fileReader.readAsText(arch);
+    // Si sale bien es fileReader.onload, sino, para catchear el error es fileReader.onerror
+    fileReader.onload = () => {
+        docFile2 = fileReader.result;
+        console.log("onload: ", fileReader.result);
+    };
+    fileReader.onerror = () => {
+        console.log("onload: ", fileReader.error);
+    }; */
+
     const docFile: WikiInterface = await fetch(`src/docs/${fileName}.md`)
         .then((res) => {
             return res.blob();
